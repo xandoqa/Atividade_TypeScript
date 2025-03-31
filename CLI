@@ -154,7 +154,7 @@ exibirMenu();
 
 
 
-SEGUNDO CÓDIGO: 
+SEGUNDO CÓDIGO (mais resumido): 
 
 function exibirMenu(): void {
     console.log("\n=== Gerenciamento de Inventário ===");
