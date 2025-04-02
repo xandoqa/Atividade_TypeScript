@@ -7,14 +7,14 @@ const rl = readline.createInterface({
 });
 
 export function exibirMenu(inventario: Inventario): void {
-  console.log("\n=== Gerenciamento de Inventário ===");
+  console.log("\n!=== Gerenciamento de Inventário ===!");
   console.log("1 - Criar Categoria");
   console.log("2 - Listar Categorias");
   console.log("3 - Criar Produto");
   console.log("4 - Listar Produtos");
   console.log("5 - Sair");
   console.log("===============================");
-  rl.question("Escolha uma opção (1-5): ", opcao => {
+  rl.question(" Por favor, digite uma opção (1-5): ", opcao => {
     switch (opcao.trim()) {
       case "1":
         rl.question("Nome da categoria: ", nome => {
@@ -33,12 +33,12 @@ export function exibirMenu(inventario: Inventario): void {
           rl.question("Descrição do produto: ", descricao => {
             rl.question("Preço do produto (ex: 10.99): ", preco => {
               if (isNaN(parseFloat(preco))) {
-                console.log("Preço inválido. Tente novamente.");
+                console.log("Preço inválido :( Por favor, tente novamente");
                 return exibirMenu(inventario);
               }
               rl.question("Quantidade (ex: 5): ", quantidade => {
                 if (isNaN(parseInt(quantidade))) {
-                  console.log("Quantidade inválida. Tente novamente.");
+                  console.log("Quantidade inválida :( Por favor, tente novamente");
                   return exibirMenu(inventario);
                 }
                 rl.question("ID da Categoria: ", categoriaId => {
