@@ -8,7 +8,7 @@ export class Inventario {
   adicionarCategoria(nome: string, descricao: string): void {
     const categoria = new Categoria(nome, descricao);
     this.categorias.push(categoria);
-    console.log(`Categoria ${categoria.nome} criada com sucesso.`);
+    console.log(`Categoria ${categoria.nome} criada com sucesso! :)`);
   }
 
   listarCategorias(): void {
@@ -27,9 +27,9 @@ export class Inventario {
     if (categoria) {
       categoria.nome = novoNome;
       categoria.descricao = novaDescricao;
-      console.log(`Categoria ${categoria.id} atualizada com sucesso.`);
+      console.log(`Categoria ${categoria.id} atualizada com sucesso! :)`);
     } else {
-      console.log("Categoria não encontrada.");
+      console.log("Categoria não encontrada :(");
     }
   }
 
@@ -37,21 +37,21 @@ export class Inventario {
     const categoriaIndex = this.categorias.findIndex(c => c.id === id);
     if (categoriaIndex !== -1) {
       this.categorias.splice(categoriaIndex, 1);
-      console.log("Categoria removida com sucesso.");
+      console.log("Categoria removida com sucesso!");
     } else {
-      console.log("Categoria não encontrada.");
+      console.log("Categoria não encontrada :(");
     }
   }
 
   adicionarProduto(nome: string, descricao: string, preco: number, quantidade: number, categoriaId: string): void {
     const categoria = this.buscarCategoria(categoriaId);
     if (!categoria) {
-      console.log("Categoria não encontrada.");
+      console.log("Categoria não encontrada :(");
       return;
     }
     const produto = new Produto(nome, descricao, preco, quantidade, categoriaId);
     this.produtos.push(produto);
-    console.log(`Produto ${produto.nome} criado com sucesso.`);
+    console.log(`Produto ${produto.nome} criado com sucesso! :)`);
   }
 
   listarProdutos(): void {
