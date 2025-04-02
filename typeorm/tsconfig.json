@@ -1,16 +1,16 @@
 {
-    "compilerOptions": {
-      "target": "ES6",
-      "module": "CommonJS",
-      "outDir": "./dist",
-      "rootDir": "typeorm/src",
-      "strict": true,
-      "esModuleInterop": true,
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
-    },
-    "include": ["src"],
-    "exclude": ["node_modules", "dist"]
-  }  
+  "compilerOptions": {
+    "target": "ES6",  // Define que o TypeScript será convertido para JavaScript na versão ES6 (mais moderna)
+    "module": "CommonJS",  // Indica que o projeto usa o formato de módulo do Node.js (CommonJS)
+    "outDir": "./dist",  // Especifica onde os arquivos JavaScript gerados serão salvos (neste caso, na pasta 'dist')
+    "rootDir": "typeorm/src",  // Define onde estão os arquivos TypeScript originais (no diretório 'src')
+    "strict": true,  // Ativa verificações rigorosas de tipos para evitar erros
+    "esModuleInterop": true,  // Permite importar módulos comuns (do tipo CommonJS) usando a sintaxe de módulos ES6
+    "experimentalDecorators": true,  // Permite o uso de decoradores, uma funcionalidade importante para o TypeORM
+    "emitDecoratorMetadata": true,  // Gera metadados adicionais necessários para usar decoradores no TypeORM
+    "skipLibCheck": true,  // Ignora a verificação de tipos nas bibliotecas de terceiros para acelerar a compilação
+    "forceConsistentCasingInFileNames": true  // Garante que o nome dos arquivos seja consistente, levando em conta maiúsculas e minúsculas
+  },
+  "include": ["src"],  // Inclui todos os arquivos dentro da pasta 'src' para compilar
+  "exclude": ["node_modules", "dist"]  // Exclui as pastas 'node_modules' e 'dist' da compilação (para evitar compilar dependências e arquivos gerados)
+}
