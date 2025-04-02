@@ -32,6 +32,6 @@ export class ProdutoController {
         const produto = await produtoRepo.findOne({ where: { id } });
         if (!produto) return console.log("Produto não encontrado :(");
         await produtoRepo.remove(produto);
-        console.log("Produto removido!");
+        console.log("Produto removido com sucesso!");
     }
 }
