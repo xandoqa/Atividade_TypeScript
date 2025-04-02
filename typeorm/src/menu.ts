@@ -8,14 +8,14 @@ const rl = readline.createInterface({
 });
 
 function exibirMenu() {
-    console.log("\n=== Gerenciamento de Inventário ===");
+    console.log("\n!=== Gerenciamento de Inventário ===!");
     console.log("1 - Criar Categoria");
     console.log("2 - Listar Categorias");
     console.log("3 - Criar Produto");
     console.log("4 - Listar Produtos");
     console.log("5 - Sair");
 
-    rl.question("Escolha uma opção: ", async (opcao) => {
+    rl.question("Por favor, digite uma opção: ", async (opcao) => {
         switch (opcao.trim()) {
             case "1":
                 rl.question("Nome da categoria: ", (nome) => {
