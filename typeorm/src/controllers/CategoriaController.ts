@@ -20,14 +20,14 @@ export class CategoriaController {
             where: [{ id: valor }, { nome: valor }],
             relations: ["produtos"]
         });
-        console.log(categoria || "Categoria não encontrada.");
+        console.log(categoria || "Categoria não encontrada :(");
     }
 
     static async remover(id: string) {
         const categoria = await categoriaRepo.findOne({ where: { id }, relations: ["produtos"] });
-        if (!categoria) return console.log("Categoria não encontrada.");
-        if (categoria.produtos.length > 0) return console.log("Não é possível remover, pois possui produtos.");
+        if (!categoria) return console.log("Categoria não encontrada :(");
+        if (categoria.produtos.length > 0) return console.log("Não é possível remover, pois possui produtos!");
         await categoriaRepo.remove(categoria);
-        console.log("Categoria removida.");
+        console.log("Categoria removida com sucesso!");
     }
 }
