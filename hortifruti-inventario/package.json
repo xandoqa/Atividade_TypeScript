@@ -1,11 +1,11 @@
 {
     "name": "hortifruti-inventario",
     "version": "1.0.0",
-    "main": "dist/main.js",
+    "inex": "dist/index.js",
     "scripts": {
         "build": "tsc",
-        "start": "tsc && node dist/main.js",
-        "dev": "ts-node src/main.ts"
+        "start": "tsc && node dist/index.js",
+        "dev": "ts-node src/index.ts"
     },
     "dependencies": {
         "inquirer": "^9.3.7"
