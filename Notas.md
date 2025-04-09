@@ -6,7 +6,7 @@
 #### Caio Murilo Silva de Oliveira UC23100307
 #### Ester Yasmin Santos Silva UC23102494
 
-## Favor instalar as dependências ao rodar o projeto
+### Favor instalar as dependências ao rodar o projeto
 
 É preciso ter node.js para poder rodar o projeto!
 
