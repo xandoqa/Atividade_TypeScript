@@ -37,7 +37,18 @@ export async function categoriaMenu() {
 
       case "Listar Categorias":
         const todas = await categoriaRepo.find();
-        console.table(todas);
+
+        if (todas.length === 0) {
+          console.log("Nenhuma categoria encontrada.");
+        } else {
+          console.table(
+            todas.map((c) => ({
+              ID: c.id,
+              Nome: c.nome,
+              Descrição: c.descricao
+            }))
+          );
+        }
         break;
 
       case "Buscar Categoria":
@@ -54,9 +65,15 @@ export async function categoriaMenu() {
         });
 
         if (resultados.length === 0) {
-          console.log("Nenhuma categoria encontrada.");
+          console.log("Nenhuma categoria encontrada...");
         } else {
-          console.table(resultados);
+          console.table(
+            resultados.map((c) => ({
+              ID: c.id,
+              Nome: c.nome,
+              Descrição: c.descricao
+            }))
+          );
         }
         break;
 
@@ -74,8 +91,16 @@ export async function categoriaMenu() {
         }
 
         const atualizada = await inquirer.prompt([
-          { name: "nome", message: `Nome (${categoriaAtual.nome}):`, default: categoriaAtual.nome },
-          { name: "descricao", message: `Descrição (${categoriaAtual.descricao}):`, default: categoriaAtual.descricao }
+          {
+            name: "nome",
+            message: `Nome (${categoriaAtual.nome}):`,
+            default: categoriaAtual.nome
+          },
+          {
+            name: "descricao",
+            message: `Descrição (${categoriaAtual.descricao}):`,
+            default: categoriaAtual.descricao
+          }
         ]);
 
         categoriaRepo.merge(categoriaAtual, atualizada);
