@@ -1,3 +1,14 @@
+# Hortifruti
+
+## Dependências a serem instaladas
+
+npm install
+
+## Para executar no terminal do VS Code
+
+npx ts-node src/index.ts
+
+
 ## Integrantes do Projeto
 #### Alexandre Rodrigues Costa UC23101095
 #### André Luiz Borges Aguiar UC23200389
