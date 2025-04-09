@@ -1,6 +1,0 @@
-{
-    "type": "sqlite",
-    "database": "hortifruti.sqlite",
-    "entities": ["src/entity/*.ts"],
-    "synchronize": true
-  }  
