@@ -1,13 +1,13 @@
 {
-    "compilerOptions": {
-      "target": "ES2020",
-      "module": "CommonJS",
-      "rootDir": "./src",
-      "outDir": "./dist",
-      "strict": true,
-      "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true,
-      "skipLibCheck": true
-    },
-    "include": ["src"]
-  }  
+  "compilerOptions": {
+    "target": "ES2020", // Versão do JS gerado
+    "module": "CommonJS", // Tipo de módulo (Node.js)
+    "rootDir": "./src", // Pasta dos arquivos .ts
+    "outDir": "./dist", // Pasta de saída do JS
+    "strict": true, // Regras de tipo mais rígidas
+    "esModuleInterop": true, // Permite importação de módulos CommonJS
+    "forceConsistentCasingInFileNames": true, // Garante nomes de arquivos com letras consistentes
+    "skipLibCheck": true // Ignora checagem de tipos em libs
+  },
+  "include": ["src"] // Arquivos a serem compilados
+}
