@@ -26,7 +26,6 @@ export async function menuProduto(produtoService: ProdutoService, categoriaServi
 
     switch (opcao) {
       case "Criar produto":
-        // Listar categorias disponíveis para seleção
         const categorias = categoriaService.getCategorias();
         if (categorias.length === 0) {
           console.log("\n Não há categorias cadastradas. Crie uma categoria primeiro.");
